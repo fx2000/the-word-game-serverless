@@ -1,7 +1,7 @@
 // Wordnik API
 import axios from 'axios'
 
-export const getRandomWord = async (partOfSpeech = 'noun', minCorpusCount = 8000, maxCorpusCount = -1, hasDictionaryDef = true) => {
+export const getRandomWord = async (partOfSpeech = 'proper-noun', minCorpusCount = 50000, maxCorpusCount = -1, hasDictionaryDef = true) => {
   try {
     return await axios.get(process.env.REACT_APP_WORDNIK_URL + 'words.json/randomWord', {
       params: {
